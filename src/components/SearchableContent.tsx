@@ -6,6 +6,7 @@ import { Member, Connection, ROLE_OPTIONS, VERTICAL_OPTIONS } from '@/data/membe
 import MembersTable from './MembersTable';
 import NetworkGraph from './NetworkGraph';
 import AsciiBackground from './AsciiBackground';
+import CampusNetworks from './CampusNetworks';
 import { Search, ChevronDown, ChevronUp, X } from 'lucide-react';
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -171,6 +172,7 @@ export default function SearchableContent({ members, connections }: SearchableCo
                                 submit a pull request
                             </a>
                         </p>
+                        <p><a href="#campus-networks" className="join-link">explore other campus networks ↗</a></p>
                     </div>
                 </div>
 
@@ -264,6 +266,7 @@ export default function SearchableContent({ members, connections }: SearchableCo
                     membersWithoutEmbed={membersWithoutEmbed}
                     referrerDullIds={referrerDullIds}
                 />
+                <CampusNetworks />
             </div>
         </main>
     );
