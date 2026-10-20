@@ -172,7 +172,6 @@ export default function SearchableContent({ members, connections }: SearchableCo
                                 submit a pull request
                             </a>
                         </p>
-                        <p><a href="#campus-networks" className="join-link">explore other campus networks ↗</a></p>
                     </div>
                 </div>
 

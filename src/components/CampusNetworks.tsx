@@ -15,19 +15,23 @@ const campusNetworks = [
 
 export default function CampusNetworks() {
     return (
-        <section className="campus-networks" id="campus-networks" aria-labelledby="campus-networks-heading">
-            <h2 id="campus-networks-heading">beyond waterloo</h2>
-            <p>shoutout to the students connecting their own campuses. go meet the people building things elsewhere.</p>
+        <details className="campus-networks" id="campus-networks">
+            <summary>friends elsewhere</summary>
             <ul className="campus-networks-list">
                 {campusNetworks.map(network => (
                     <li key={network.url}>
-                        <a href={network.url} target="_blank" rel="noopener noreferrer">
-                            <span className="campus-network-name">{network.name} <span aria-hidden="true">↗</span></span>
-                            <span className="campus-network-school">{network.school}</span>
+                        <a
+                            href={network.url}
+                            title={network.school}
+                            aria-label={`${network.name} — ${network.school}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {network.name}
                         </a>
                     </li>
                 ))}
             </ul>
-        </section>
+        </details>
     );
 }
